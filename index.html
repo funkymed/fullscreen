@@ -20,8 +20,10 @@
     {
         $('.imgresized').jQFullscreen();
 
-        setTimeout(resize,300);
+        resize();
         $(window).on('resize', $.proxy(resize));
+
+        $('.info').css('opacity',.9);
     });
 
     var resize = function()

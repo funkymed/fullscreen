@@ -10,7 +10,7 @@ body,html,h1{
     width:200px;
     z-index: 2;
     position:absolute;
-    opacity:.9;
+    opacity:0;
     color:black;
     text-align: center;
     padding:15px;
