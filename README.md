@@ -1,4 +1,8 @@
 jquery-fullscreen
 =================
 
-Put a div in fullscreen fitted homothetically inside the browser
+Put a HTML node in fullscreen fitted homothetically inside the browser
+
+~~~
+  $('img').jQFullscreen();
+~~~
