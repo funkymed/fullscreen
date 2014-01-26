@@ -11,6 +11,7 @@ Cyril Pereira http://www.cyrilpereira.com
 
 ##Demo
 Image : http://www.cyrilpereira.com/jQFullscreen/index.html
+
 Video : http://www.cyrilpereira.com/jQFullscreen/video.html
 
 ##Documentation
