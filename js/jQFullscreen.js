@@ -23,6 +23,7 @@ var jQFullscreen = function(item, options)
   {
     if(this.item[0].nodeName=='IMG')
     {
+      this.item.hide();
       this.item.on('load', $.proxy(this.onLoadIMG, this));
     }else{
       this.onResize();
@@ -41,6 +42,7 @@ jQFullscreen.prototype ={
     this.orgW = $(i.currentTarget).width();
     this.orgH = $(i.currentTarget).height();
     this.onResize();
+    this.item.fadeIn('slow');
   },
   getViewportSize:function () {
     var elmt = window, prop = "inner";
