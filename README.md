@@ -29,3 +29,5 @@ How to use ?
 transition : ease-in, ease-out, ease-in-out
 
 speed : time in second
+
+fade : time in millisecond for the fade after load img

@@ -18,7 +18,7 @@
 <script type="text/javascript">
     $(document).ready(function()
     {
-        $('.imgresized').jQFullscreen();
+        $('.imgresized').jQFullscreen({fade:3000});
 
         resize();
         $(window).on('resize', $.proxy(resize));

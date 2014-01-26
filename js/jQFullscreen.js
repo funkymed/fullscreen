@@ -10,13 +10,18 @@
 var jQFullscreen = function(item, options)
 {
   this.item = $(item);
+
   if(options)
   {
+
     if(options.transition && options.speed)
     {
       var _transition = 'all '+options.speed+'s '+options.transition;
       this.item.css({'transition':_transition});
     }
+
+    if(options.fade)
+      this.fade = options.fade;
   }
 
   if(this.item[0] && this.item[0].nodeName)
@@ -42,7 +47,11 @@ jQFullscreen.prototype ={
     this.orgW = $(i.currentTarget).width();
     this.orgH = $(i.currentTarget).height();
     this.onResize();
-    this.item.fadeIn('slow');
+
+    if(this.fade)
+      this.item.fadeIn(this.fade);
+    else
+      this.item.fadeIn();
   },
   getViewportSize:function () {
     var elmt = window, prop = "inner";
@@ -105,7 +114,6 @@ jQFullscreen.prototype ={
 
 jQuery.fn.extend({
   jQFullscreen: function(options){
-    console.debug(options);
     var _jQ = new jQFullscreen(this, options);
     $(window).on('resize', $.proxy(_jQ.onResize, _jQ));
   }
