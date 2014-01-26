@@ -10,7 +10,7 @@ GitHub : https://github.com/funkymed/jquery-fullscreen
 Cyril Pereira http://www.cyrilpereira.com
 
 ##Demo
-Image : http://www.cyrilpereira.com/jQFullscreen/index.html
+Image : http://www.cyrilpereira.com/jQFullscreen
 
 Video : http://www.cyrilpereira.com/jQFullscreen/video.html
 
