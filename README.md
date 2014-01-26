@@ -19,3 +19,13 @@ How to use ?
 ~~~
   $('img').jQFullscreen();
 ~~~
+
+##options
+
+~~~
+  $('img').jQFullscreen({transition:'ease-in-out',speed:0});
+~~~
+
+transition : ease-in, ease-out, ease-in-out
+
+speed : time in second

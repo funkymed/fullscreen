@@ -13,12 +13,13 @@
     <strong class="blue">Resize the window</strong>
 </div>
 
-<img src="images/image7.jpg" />
+<img class="imgresized" src="images/image7.jpg" />
 
 <script type="text/javascript">
     $(document).ready(function()
     {
-        $('img').jQFullscreen();
+        $('img.imgresized').jQFullscreen();
+
         setTimeout(resize,300);
         $(window).on('resize', $.proxy(resize));
     });

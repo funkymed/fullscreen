@@ -7,9 +7,18 @@
  *
  */
 
-var jQFullscreen = function(item)
+var jQFullscreen = function(item, options)
 {
   this.item = $(item);
+  if(options)
+  {
+    if(options.transition && options.speed)
+    {
+      var _transition = 'all '+options.speed+'s '+options.transition;
+      this.item.css({'transition':_transition});
+    }
+  }
+
   if(this.item[0].nodeName=='IMG')
   {
     this.item.on('load', $.proxy(this.onLoadIMG, this));
@@ -88,8 +97,9 @@ jQFullscreen.prototype ={
 
 
 jQuery.fn.extend({
-  jQFullscreen: function(){
-    var _jQ = new jQFullscreen(this);
+  jQFullscreen: function(options){
+    console.debug(options);
+    var _jQ = new jQFullscreen(this, options);
     $(window).on('resize', $.proxy(_jQ.onResize, _jQ));
   }
 });

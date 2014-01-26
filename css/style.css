@@ -16,7 +16,7 @@ body,html,h1{
     padding:15px;
     border:1px #333 solid;
     border-radius: 10px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     -webkit-box-shadow: 0 5px 20px 0 #000000;
     box-shadow: 0 5px 20px 0 #000000;
 }
