@@ -22,6 +22,10 @@ var jQFullscreen = function(item, options)
 
     if(options.fade)
       this.fade = options.fade;
+    if(options.width)
+      this.orgW = options.width;
+    if(options.height)
+      this.orgH = options.height;
   }
 
   if(this.item[0] && this.item[0].nodeName)
