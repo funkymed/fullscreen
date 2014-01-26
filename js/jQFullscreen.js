@@ -19,11 +19,16 @@ var jQFullscreen = function(item, options)
     }
   }
 
-  if(this.item[0].nodeName=='IMG')
+  if(this.item[0] && this.item[0].nodeName)
   {
-    this.item.on('load', $.proxy(this.onLoadIMG, this));
+    if(this.item[0].nodeName=='IMG')
+    {
+      this.item.on('load', $.proxy(this.onLoadIMG, this));
+    }else{
+      this.onResize();
+    }
   }else{
-    this.onResize();
+    console.log('node not found')
   }
 };
 
