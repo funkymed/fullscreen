@@ -1,53 +1,89 @@
-jquery-fullscreen
-=================
+# Fullscreen
+
+Author : Cyril Pereira
 
 Put a HTML node in fullscreen fitted homothetically inside the browser
 
-GitHub : https://github.com/funkymed/jquery-fullscreen
+GitHub : https://github.com/funkymed/fullscreen
 
-##Author
+# Demo
+Image : http://medcg.free.fr/tmp/fullscreen/index.html
 
-Cyril Pereira <cyril.pereira@gmail.com>
+# Install
 
-##Demo
-Image : http://med.planet-d.net/demo/web/jQFullscreen
+```bash
+yarn add funkymed-fullscreen --save
+```
 
-Video : http://med.planet-d.net/demo/web/jQFullscreen/video.html
+## Build
 
-##Documentation
+```bash
+yarn build
+```
 
-###How to use ?
+## Test
+
+```bash
+yarn start
+```
+
+# Install in React
+
+```javascript
+import $ from "jquery";
+import '../dist/Fullscreen'
+```
+
+```javascript
+componentDidMount()
+{
+    $('.imgresized').Fullscreen({fade:3000});
+}
+```
+
+```javascript
+render()
+{
+    return (
+        <div>
+            <img className="imgresized" src="images/image7.jpg" />
+        </div>
+    );
+}
+```
+
+# How to use ?
 
 Just do this
 
-~~~
-  $('img').jQFullscreen();
-~~~
+```javascript
+$('img').Fullscreen();
+```
 
-###options
+## options
 
-~~~
-  $('img').jQFullscreen({transition:'ease-in-out',speed:0});
-~~~
+```javascript
+$('img').Fullscreen({transition:'ease-in-out',speed:0});
+```
 
 transition : ease-in, ease-out, ease-in-out
 
 speed : time in second
 
-####Fade
+### Fade
 
-~~~
-  $('img').jQFullscreen({fade:3000});
-~~~
+```javascript
+$('img').Fullscreen({fade:3000});
+```
 
 fade : time in millisecond for the fade after load img
 
-####Width and height
+### Width and height
 
 if you need use something else than image, you will need to set the size
 
 just add width and height to the object option
 
-~~~
-$('img').jQFullscreen({width:1280,height:720});
-~~~
+```javascript
+$('img').Fullscreen({width:1280,height:720});
+```

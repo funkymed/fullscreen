@@ -1,0 +1,46 @@
+{
+  "name": "funkymed-fullscreen",
+  "version": "1.0.4",
+  "description": "Managefullscreen element in React",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/babel src --out-dir dist",
+    "watch": "node_modules/.bin/webpack src --watch",
+    "build-demo": "node_modules/.bin/webpack src",
+    "start": "node_modules/.bin/webpack-dev-server --port 3001",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/tslint assets/js/**/*.{ts,tsx}"
+  },
+  "keywords": [
+    "layer",
+    "control",
+    "visualization",
+    "funkymed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funkymed/fullscreen.git"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "react": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "react-dom": "^15.5.4",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "author": "Cyril Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funkymed/fullscreen/issues"
+  },
+  "homepage": "https://github.com/funkymed/fullscreen#readme"
+}

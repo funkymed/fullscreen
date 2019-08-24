@@ -1,3 +1,5 @@
+import jQuery from 'jquery'
+
 /*!
  * jQuery fullscreen
  *
@@ -7,9 +9,9 @@
  *
  */
 
-var jQFullscreen = function(item, options)
+var fullscreen = function(item, options)
 {
-  this.item = $(item);
+  this.item = jQuery(item);
 
   if(options)
   {
@@ -33,7 +35,7 @@ var jQFullscreen = function(item, options)
     if(this.item[0].nodeName=='IMG')
     {
       this.item.hide();
-      this.item.on('load', $.proxy(this.onLoadIMG, this));
+      this.item.on('load', jQuery.proxy(this.onLoadIMG, this));
     }else{
       this.onResize();
     }
@@ -42,14 +44,14 @@ var jQFullscreen = function(item, options)
   }
 };
 
-jQFullscreen.prototype ={
+fullscreen.prototype ={
   orgW:0,
   orgH:0,
   item:null,
   onLoadIMG:function(i)
   {
-    this.orgW = $(i.currentTarget).width();
-    this.orgH = $(i.currentTarget).height();
+    this.orgW = jQuery(i.currentTarget).width();
+    this.orgH = jQuery(i.currentTarget).height();
     this.onResize();
 
     if(this.fade)
@@ -111,14 +113,14 @@ jQFullscreen.prototype ={
         options = this.getPaysage(vp);
       }
     }
-    $(this.item).css(options);
+    jQuery(this.item).css(options);
   }
 };
 
 
 jQuery.fn.extend({
-  jQFullscreen: function(options){
-    var _jQ = new jQFullscreen(this, options);
-    $(window).on('resize', $.proxy(_jQ.onResize, _jQ));
+  Fullscreen: function(options){
+    var _jQ = new fullscreen(this, options);
+    jQuery(window).on('resize', jQuery.proxy(_jQ.onResize, _jQ));
   }
 });
