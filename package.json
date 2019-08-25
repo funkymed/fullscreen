@@ -1,6 +1,6 @@
 {
   "name": "funkymed-fullscreen",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Managefullscreen element in React",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,10 @@
     "lint": "./node_modules/.bin/tslint assets/js/**/*.{ts,tsx}"
   },
   "keywords": [
-    "layer",
-    "control",
-    "visualization",
+    "fullscreen",
+    "dom",
+    "homothety",
+    "image",
     "funkymed"
   ],
   "repository": {
