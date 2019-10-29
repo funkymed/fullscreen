@@ -36,7 +36,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "react-dom": "^15.5.4",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "author": "Cyril Pereira",
   "license": "ISC",
